@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .login-container h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .login-container input {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background: #0a74da;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .switch-form {
+      margin-top: 1rem;
+      text-align: center;
+      color: #555;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🛒 Buy & Sell</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="login-container" id="login-form">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+      <div class="switch-form" onclick="showRegister()">Don't have an account? Register</div>
+    </div>
+
+    <div class="login-container" id="register-form" style="display: none;">
+      <h2>Register</h2>
+      <input type="text" placeholder="Full Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Register</button>
+      <div class="switch-form" onclick="showLogin()">Already have an account? Login</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Buy & Sell Store | Made by <strong>Sushank Choudhary</strong></p>
+  </footer>
+
+  <script>
+    function showRegister() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('register-form').style.display = 'block';
+    }
+
+    function showLogin() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('register-form').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
